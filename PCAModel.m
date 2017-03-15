@@ -56,6 +56,18 @@ classdef PCAModel
             
         end
         
+        function Y = reduce(this,data)
+            X = data';
+            
+            N = size(X,1); % number of points
+
+            % Center data:
+            score = X - repmat(this.mu,N,1);
+
+            % Rotate data:
+            Y = score * this.coeff;
+        end
+        
     end
     methods (Static)
         function perform = L2Norm(X,Y)
