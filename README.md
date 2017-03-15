@@ -23,4 +23,7 @@ X2 = X + 1;
 % The model with parameters calculated on the "training" data set is used on another set:
 [Y2,perform2] = model.run(X2);
 fprintf('Performance on second set: %.2f\n',perform2);
+
+% To get the reduced data:
+Y_reduced = model.reduce(X);
 ```
