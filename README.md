@@ -4,7 +4,7 @@
 Dimensionality reduction model based on PCA.
 
 Example
-=====
+-----
 
 ```matlab
 % Training data set:
