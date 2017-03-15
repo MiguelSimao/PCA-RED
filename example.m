@@ -8,7 +8,9 @@ model = PCAModel(X,3);
 [Y,perform] = model.run(X);
 fprintf('Performance on original set: %.2f\n',perform);
 
+% Altered model:
 X2 = X + 1;
 
+% The model with parameters calculated on the "training" data set is used on another set:
 [Y2,perform2] = model.run(X2);
 fprintf('Performance on second set: %.2f\n',perform2);
